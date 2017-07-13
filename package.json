@@ -1,0 +1,13 @@
+{
+  "name": "crower",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gogobg/trying",
+  "author": "gogobg <gogok_bg@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.1.0"
+  }
+}

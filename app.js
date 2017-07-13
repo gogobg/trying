@@ -1,11 +1,16 @@
 require('./polyfils');
-const { DETAILS } = require('./selectors');
-console.log(DETAILS);
+
 const genersUrlBase = 'http://www.imdb.com/genre/';
 const genres = ['action'];
 
+const { Movie } = require('./models/movie.model');
+
+require('./models/extension');
+
+const movies = [];
+
 const getMovieData = (url) => {
-    fetch(url)
+    return fetch(url)
         .then((response) => {
             if (!response.ok) {
                 throw new Error('invalid URL');
@@ -13,15 +18,14 @@ const getMovieData = (url) => {
             return response.text();
         })
         .then((html) => {
-            return require('./dom-parser')(html);
-        })
-        .then(($) => {
-            const title = $(DETAILS.TITLE_SELECTOR).html();
-            console.log(title);
-
-            // const title = $('title').html();
-            // console.log(title);
+            const movie = Movie.fromHtml(html);
+            return movie;
         });
 };
 
-getMovieData('http://www.imdb.com/title/tt0114709/');
+Promise.all([getMovieData('http://www.imdb.com/title/tt0114709/'),
+getMovieData('http://www.imdb.com/title/tt2250912/'),
+])
+    .then((x) => {
+        console.log(x);
+    });

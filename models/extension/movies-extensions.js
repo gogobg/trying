@@ -1,0 +1,15 @@
+const { Movie } = require('../movie.model');
+const initParser = require('../../dom-parser');
+const { DETAILS } = require('../../selectors');
+
+Movie.fromHtml = (html) => {
+    return initParser(html)
+        .then(($) => {
+            let title = $(DETAILS.TITLE_SELECTOR).html();
+            title = title.substring(0, title.indexOf('&nbsp;<span'));
+            let posterUrl = $(DETAILS.POSTER_IMG_URL).attr('src');
+            return new Movie(title, posterUrl);
+        });
+};
+
+

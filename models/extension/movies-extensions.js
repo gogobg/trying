@@ -7,7 +7,7 @@ Movie.fromHtml = (html) => {
         .then(($) => {
             let title = $(DETAILS.TITLE_SELECTOR).html();
             title = title.substring(0, title.indexOf('&nbsp;<span'));
-            let posterUrl = $(DETAILS.POSTER_IMG_URL).attr('src');
+            const posterUrl = $(DETAILS.POSTER_IMG_URL).attr('src');
             return new Movie(title, posterUrl);
         });
 };

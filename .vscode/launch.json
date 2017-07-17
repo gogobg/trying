@@ -7,6 +7,7 @@
         {
             "type": "node",
             "request": "launch",
+            "protocol": "auto",
             "name": "Launch Program",
             "program": "${file}"
         }

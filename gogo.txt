@@ -1,0 +1,104 @@
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+---- PREDI this.tail.next = item; -----------
+head ----------> { value: 'edno', next: null }
+tail ----------> { value: 'edno', next: null }
+next HEAD  ----------> null
+next TAIL  ----------> null
+---- SLED  this.tail.next = item; -----------
+head ----------> { value: 'edno', next: { value: 'dve', next: null } }
+tail ----------> { value: 'edno', next: { value: 'dve', next: null } }
+next HEAD  ----------> { value: 'dve', next: null }
+next TAIL  ----------> { value: 'dve', next: null }
+---- SLED   this.tail = item;-----------
+head ----------> { value: 'edno', next: { value: 'dve', next: null } }
+tail ----------> { value: 'dve', next: null }
+next HEAD  ----------> { value: 'dve', next: null }
+next TAIL  ----------> null
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+---- PREDI this.tail.next = item; -----------
+head ----------> { value: 'edno', next: { value: 'dve', next: null } }
+tail ----------> { value: 'dve', next: null }
+next HEAD  ----------> { value: 'dve', next: null }
+next TAIL  ----------> null
+---- SLED  this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: null } } }
+tail ----------> { value: 'dve', next: { value: 'tree', next: null } }
+next HEAD  ----------> { value: 'dve', next: { value: 'tree', next: null } }
+next TAIL  ----------> { value: 'tree', next: null }
+---- SLED   this.tail = item;-----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: null } } }
+tail ----------> { value: 'tree', next: null }
+next HEAD  ----------> { value: 'dve', next: { value: 'tree', next: null } }
+next TAIL  ----------> null
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+---- PREDI this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: null } } }
+tail ----------> { value: 'tree', next: null }
+next HEAD  ----------> { value: 'dve', next: { value: 'tree', next: null } }
+next TAIL  ----------> null
+---- SLED  this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: 'tree', next: { value: '4etiri', next: null } }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: null } } }
+next TAIL  ----------> { value: '4etiri', next: null }
+---- SLED   this.tail = item;-----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: '4etiri', next: null }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: null } } }
+next TAIL  ----------> null
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+---- PREDI this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: '4etiri', next: null }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: null } } }
+next TAIL  ----------> null
+---- SLED  this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: '4etiri', next: { value: 'pet', next: null } }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: [Object] } } }
+next TAIL  ----------> { value: 'pet', next: null }
+---- SLED   this.tail = item;-----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: 'pet', next: null }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: [Object] } } }
+next TAIL  ----------> null
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+---- PREDI this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: 'pet', next: null }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: [Object] } } }
+next TAIL  ----------> null
+---- SLED  this.tail.next = item; -----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: 'pet', next: { value: '6est', next: null } }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: [Object] } } }
+next TAIL  ----------> { value: '6est', next: null }
+---- SLED   this.tail = item;-----------
+head ----------> { value: 'edno',
+  next: { value: 'dve', next: { value: 'tree', next: [Object] } } }
+tail ----------> { value: '6est', next: null }
+next HEAD  ----------> { value: 'dve',
+  next: { value: 'tree', next: { value: '4etiri', next: [Object] } } }
+next TAIL  ----------> null
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
